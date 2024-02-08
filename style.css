@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --color1: #fff;
+  --color2: #1c1c1c;
+}
+
+body {
+  background: #f2f2f2;
+  font-family: "Poppins", sans-serif;
+}
+
+main {
+  padding: 20px 80px;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 20px 40px;
+  }
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 35px;
+}
+
+/* Carousel de AD*/
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  overflow: hidden;
+  padding: 10px;
+  background: white;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+
+.logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+.logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: 35s slide infinite linear;
+}
+
+.logos-slide img {
+  height: 150px;
+  margin: 0 40px;
+}
+
+/* Nav bar */
+
+.nav-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  position: relative;
+  background-color: var(--color2);
+  padding: 12px 20px;
+}
+
+.logo-radio img {
+  width: 50px;
+}
+
+.logo-wpp {
+  height: 40px;
+  margin-left: 20px;
+}
+.menu {
+  display: flex;
+  align-items: center;
+}
+.menu li {
+  padding-left: 30px;
+}
+.menu li a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--color1);
+  text-align: center;
+  transition: 0.15s ease-in-out;
+  position: relative;
+  text-transform: uppercase;
+}
+.menu li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--color1);
+  transition: 0.15s ease-in-out;
+}
+.menu li a:hover:after {
+  width: 100%;
+}
+.open-menu,
+.close-menu {
+  position: absolute;
+  color: var(--color1);
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: none;
+}
+.open-menu {
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+.close-menu {
+  top: 20px;
+  right: 20px;
+}
+#check {
+  display: none;
+}
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 100;
+    background-color: var(--color2);
+    transition: all 0.2s ease-in-out;
+  }
+  .menu li {
+    margin-top: 40px;
+  }
+  .menu li a {
+    padding: 10px;
+  }
+  .open-menu,
+  .close-menu {
+    display: block;
+  }
+
+  .logo-wpp {
+    margin-top: 30px;
+  }
+  #check:checked ~ .menu {
+    right: 0;
+  }
+}
+
+/* Banners*/
+
+.banners {
+  overflow: hidden;
+  background: #1c1c1c;
+  white-space: nowrap;
+  position: relative;
+  padding: 10px;
+}
+
+.banners:before,
+.banners:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos:before {
+  left: 0;
+}
+
+.logos:after {
+  right: 0;
+}
+
+.banners:hover .banners-slide {
+  animation-play-state: paused;
+}
+
+.banners-slide {
+  display: inline-block;
+  animation: 200s slide infinite linear;
+}
+
+.banners-slide img {
+  height: 100%;
+}
+
+/*About the radio*/
+
+@media only screen and (min-width: 600px) {
+  .radio-content {
+    display: flex;
+    align-items: flex-start;
+    margin: 0 auto;
+  }
+
+  .radio-img {
+    flex: 0 0 auto;
+    max-width: 50%;
+    margin-right: 20px;
+    border-radius: 4%;
+  }
+
+  .radio-text {
+    flex: 1;
+    text-align: justify;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .radio-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .radio-img {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .radio-text {
+    text-align: justify;
+  }
+}
