@@ -9,21 +9,41 @@
 body {
   background: #f2f2f2;
   font-family: "Poppins", sans-serif;
+  margin-bottom: 110px;
 }
 
-main {
-  padding: 20px 80px;
+.section {
+  margin-top: 20px;
 }
 
-@media (max-width: 768px) {
-  main {
-    padding: 20px 40px;
-  }
-}
+/* typographies */
 
 h1 {
   font-weight: bold;
   font-size: 35px;
+}
+
+.title {
+  position: relative;
+  font-size: 24px;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.title::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 20px;
+  background-color: black;
+}
+
+.radio-text p {
+  margin-bottom: 30px;
 }
 
 /* Carousel de AD*/
@@ -94,6 +114,7 @@ h1 {
 
 .logo-radio img {
   width: 50px;
+  display: flex;
 }
 
 .logo-wpp {
@@ -149,47 +170,14 @@ h1 {
 #check {
   display: none;
 }
-@media (max-width: 768px) {
-  .menu {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 80%;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    right: -100%;
-    z-index: 100;
-    background-color: var(--color2);
-    transition: all 0.2s ease-in-out;
-  }
-  .menu li {
-    margin-top: 40px;
-  }
-  .menu li a {
-    padding: 10px;
-  }
-  .open-menu,
-  .close-menu {
-    display: block;
-  }
 
-  .logo-wpp {
-    margin-top: 30px;
-  }
-  #check:checked ~ .menu {
-    right: 0;
-  }
-}
-
-/* Banners*/
+/* Header Banners */
 
 .banners {
   overflow: hidden;
   background: #1c1c1c;
   white-space: nowrap;
   position: relative;
-  padding: 10px;
 }
 
 .banners:before,
@@ -222,10 +210,221 @@ h1 {
 .banners-slide img {
   height: 100%;
 }
+/* ANNOUNCERS*/
+.annnouncers-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-/*About the radio*/
+.annnouncers-card {
+  display: flex;
+  max-width: 600px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
 
-@media only screen and (min-width: 600px) {
+.annnouncers-card img {
+  max-width: 200px;
+  height: auto;
+  object-fit: cover;
+}
+
+.annnouncers-card-content {
+  padding: 20px;
+}
+.announcers-tag {
+  color: rgb(230, 33, 98);
+}
+.annnouncers-card-content h2 {
+  margin-top: 0;
+}
+
+.social-links a {
+  margin-right: 10px;
+  color: #333;
+}
+
+.social-links a:hover {
+  color: rgb(230, 33, 98);
+}
+
+/* FOOTER */
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: var(--color2);
+  padding: 20px;
+  color: #f2f2f2;
+}
+
+.footer-column {
+  flex: 1;
+  margin: 0 10px;
+  text-align: center;
+}
+
+.footer-column h4 {
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logo-container img {
+  max-width: 100px;
+  height: auto;
+}
+
+.logo-container span {
+  margin-top: 5px;
+  font-size: 14px;
+}
+.footer-column h4 {
+  font-size: 16px;
+}
+
+.footer-column ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 5px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.social-links-footer a {
+  margin-right: 10px;
+  color: #ffffff;
+}
+
+.social-links-footer a:hover {
+  color: rgb(230, 33, 98);
+}
+
+/*PLayer*/
+
+.player-container {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--color2);
+  display: flex;
+  justify-content: center;
+  color: #ccc;
+}
+
+.player {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+  }
+
+  .footer-column {
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 791px) {
+  .section {
+    padding: 0px 40px;
+  }
+
+  /* Navbar*/
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 100;
+    background-color: var(--color2);
+    transition: all 0.2s ease-in-out;
+  }
+  .menu li {
+    margin-top: 40px;
+  }
+  .menu li a {
+    padding: 10px;
+  }
+  .open-menu,
+  .close-menu {
+    display: block;
+  }
+
+  .logo-wpp {
+    margin-top: 30px;
+  }
+  #check:checked ~ .menu {
+    right: 0;
+  }
+
+  /*announcers */
+  .annnouncers-card-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0px;
+  }
+
+  /* RADIO */
+
+  .radio-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .title-section {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .radio-content {
+    display: flex;
+  }
+
+  .radio-img {
+    max-width: 100%;
+    margin-bottom: 20px;
+    border-radius: 4%;
+    max-height: 50%;
+  }
+
+  .radio-text {
+    text-align: justify;
+  }
+}
+
+@media only screen and (min-width: 791px) {
+  .section {
+    padding: 0px 80px;
+  }
+
   .radio-content {
     display: flex;
     align-items: flex-start;
@@ -237,6 +436,7 @@ h1 {
     max-width: 50%;
     margin-right: 20px;
     border-radius: 4%;
+    max-height: 50%;
   }
 
   .radio-text {
@@ -245,21 +445,18 @@ h1 {
   }
 }
 
-@media only screen and (max-width: 600px) {
-  .radio-content {
-    display: flex;
+@media only screen and (min-width: 1025px) {
+  .section {
+    padding: 0px 200px;
+  }
+}
+
+@media only screen and (max-width: 1025px) {
+  .annnouncers-card {
     flex-direction: column;
-    align-items: center;
-    max-width: 100%;
-    padding: 0 20px;
   }
 
-  .radio-img {
+  .annnouncers-card img {
     max-width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .radio-text {
-    text-align: justify;
   }
 }

@@ -78,15 +78,165 @@
         </div>
       </div>
     </header>
-    <main>
-      <div id="#live_studio"></div>
-      <div id="#schedule"></div>
-      <div id="#announcers"></div>
-      <div id="#radio">
-        <h1>A Rádio</h1>
-        <div class="radio-content">
-          <img src="assets/predio.jpeg" class="radio-img" />
-          <p class="radio-text">
+    <section id="#live_studio" class="section">
+      <h1 class="title">Estúdio ao vivo</h1>
+      <script
+        type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"
+      ></script>
+      <style>
+        #clappr {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          margin-bottom: 25px;
+        }
+        #clappr > div {
+          width: 100%;
+          height: 100%;
+          padding-bottom: 56.25%;
+          position: relative;
+        }
+      </style>
+
+      <!-- Paste the following into the <body> -->
+      <div align="center">
+        <div id="clappr"></div>
+        <script>
+          var player = new Clappr.Player({
+            source:
+              "https://5a57bda70564a.streamlock.net/geraisfmtv/geraisfmtv.sdp/playlist.m3u8",
+            parentId: "#clappr",
+            width: "100%",
+            height: "100%",
+            autoPlay: "false",
+            //gaAccount: 'UA-44332211-1',
+            //gaTrackerName: 'MyPlayerInstance'
+          });
+        </script>
+      </div>
+    </section>
+    <div class="logos">
+      <div class="logos-slide">
+        <img src="assets/ad/jj_fretes.png" />
+        <img src="assets/ad/jj_fretes.png" />
+        <img src="assets/ad/jj_fretes.png" />
+        <img src="assets/ad/jj_fretes.png" />
+        <img src="assets/ad/jj_fretes.png" />
+        <img src="assets/ad/jj_fretes.png" />
+        <img src="assets/ad/jj_fretes.png" />
+        <img src="assets/ad/jj_fretes.png" />
+      </div>
+
+      <div class="logos-slide">
+        <img src="assets/ad/jj_fretes.png" />
+        <img src="assets/ad/jj_fretes.png" />
+        <img src="assets/ad/jj_fretes.png" />
+        <img src="assets/ad/jj_fretes.png" />
+        <img src="assets/ad/jj_fretes.png" />
+        <img src="assets/ad/jj_fretes.png" />
+        <img src="assets/ad/jj_fretes.png" />
+        <img src="assets/ad/jj_fretes.png" />
+      </div>
+    </div>
+    <section id="#schedule" class="section">
+      <h1 class="title">Programação</h1>
+    </section>
+    <div id="#announcers" class="section">
+      <h1 class="title">LOCUTORES</h1>
+      <div class="annnouncers-card-grid">
+        <div class="annnouncers-card">
+          <img src="/assets/justin.png" alt="Placeholder Image" />
+          <div class="annnouncers-card-content">
+            <h2>Justin Bieber</h2>
+            <p class="announcers-tag">House, Deep House, Electro-House</p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              vestibulum sapien felis, sed feugiat nunc convallis non.
+            </p>
+            <p>
+              Mauris ac luctus neque. Vestibulum tincidunt arcu nec vestibulum.
+              Donec rutrum, enim quis consectetur placerat.
+            </p>
+            <div class="social-links">
+              <a href="link_do_facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="link_do_twitter"><i class="fab fa-twitter"></i></a>
+              <a href="link_do_linkedin"><i class="fab fa-linkedin"></i></a>
+              <a href="link_do_instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="annnouncers-card">
+          <img src="/assets/justin.png" alt="Placeholder Image" />
+          <div class="annnouncers-card-content">
+            <h2>Justin Bieber</h2>
+            <p class="announcers-tag">House, Deep House, Electro-House</p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              vestibulum sapien felis, sed feugiat nunc convallis non.
+            </p>
+            <p>
+              Mauris ac luctus neque. Vestibulum tincidunt arcu nec vestibulum.
+              Donec rutrum, enim quis consectetur placerat.
+            </p>
+            <div class="social-links">
+              <a href="link_do_facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="link_do_twitter"><i class="fab fa-twitter"></i></a>
+              <a href="link_do_linkedin"><i class="fab fa-linkedin"></i></a>
+              <a href="link_do_instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="annnouncers-card">
+          <img src="/assets/justin.png" alt="Placeholder Image" />
+          <div class="annnouncers-card-content">
+            <h2>Justin Bieber</h2>
+            <p class="announcers-tag">House, Deep House, Electro-House</p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              vestibulum sapien felis, sed feugiat nunc convallis non.
+            </p>
+            <p>
+              Mauris ac luctus neque. Vestibulum tincidunt arcu nec vestibulum.
+              Donec rutrum, enim quis consectetur placerat.
+            </p>
+            <div class="social-links">
+              <a href="link_do_facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="link_do_twitter"><i class="fab fa-twitter"></i></a>
+              <a href="link_do_linkedin"><i class="fab fa-linkedin"></i></a>
+              <a href="link_do_instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="annnouncers-card">
+          <img src="/assets/justin.png" alt="Placeholder Image" />
+          <div class="annnouncers-card-content">
+            <h2>Justin Bieber</h2>
+            <p class="announcers-tag">House, Deep House, Electro-House</p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              vestibulum sapien felis, sed feugiat nunc convallis non.
+            </p>
+            <p>
+              Mauris ac luctus neque. Vestibulum tincidunt arcu nec vestibulum.
+              Donec rutrum, enim quis consectetur placerat.
+            </p>
+            <div class="social-links">
+              <a href="link_do_facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="link_do_twitter"><i class="fab fa-twitter"></i></a>
+              <a href="link_do_linkedin"><i class="fab fa-linkedin"></i></a>
+              <a href="link_do_instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section id="#radio" class="section">
+      <h1 class="title">A Rádio</h1>
+      <div class="radio-content">
+        <img src="assets/predio.jpeg" class="radio-img" />
+        <div class="radio-text">
+          <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
@@ -94,30 +244,88 @@
             only five centuries, but also the leap into electronic typesetting,
             remaining essentially unchanged. It was popularised in the 1960s
             with the release of Letraset sheets containing Lorem Ipsum passages,
+          </p>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s
+            with the release of Letraset sheets containing Lorem Ipsum passages,
+          </p>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s
+            with the release of Letraset sheets containing Lorem Ipsum passages,
+          </p>
+          <p>
             and more recently with desktop publishing software like Aldus
             PageMaker including versions of Lorem Ipsum. Contrary to popular
             belief, Lorem Ipsum is not simply random text. It has roots in a
             piece of classical Latin literature from 45 BC, making it over 2000
-            years old. Richard McClintock, a Latin professor at Hampden-Sydney
-            College in Virginia, looked up one of the more obscure Latin words,
-            consectetur, from a Lorem Ipsum passage, and going through the cites
-            of the word in classical literature, discovered the undoubtable
-            source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de
-            Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by
-            Cicero, written in 45 BC. This book is a treatise on the theory of
-            ethics, very popular during the Renaissance. The first line of Lorem
-            Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section
-            1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is
-            reproduced below for those interested. Sections 1.10.32 and 1.10.33
-            from "de Finibus Bonorum et Malorum" by Cicero are also reproduced
-            in their exact original form, accompanied by English versions from
-            the 1914 translation by H. Rackham.
+            Lorem Ipsum is simply dummy text of the printing and
           </p>
         </div>
       </div>
-      <div id="#contact"></div>
-    </main>
-    <footer></footer>
+    </section>
+    <section id="#contact" class="section"></section>
+    <footer class="footer">
+      <div class="footer-column">
+        <div class="logo-container">
+          <img src="/assets/icons/jovempan.png" alt="Logo da sua empresa" />
+          <span>CNPJ: 00.0000.0000/0001-79</span>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h4>CONTATO</h4>
+        <p>Endereço: Rua Exemplo, 123</p>
+        <p>Número: (99) 9999-9999</p>
+        <p>Email: exemplo@empresa.com</p>
+      </div>
+      <div class="footer-column">
+        <h4>REDES SOCIAIS</h4>
+        <div class="social-links-footer">
+          <a href="link_do_facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="link_do_twitter"><i class="fab fa-twitter"></i></a>
+          <a href="link_do_linkedin"><i class="fab fa-linkedin"></i></a>
+          <a href="link_do_instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </footer>
+    <div class="player-container">
+      <div class="player">
+        <!-- BEGINS: AUTO-GENERATED MUSES RADIO PLAYER CODE -->
+        <script
+          type="text/javascript"
+          src="https://hosted.muses.org/mrp.js"
+        ></script>
+        <script type="text/javascript">
+          MRP.insert({
+            url: "https://live.paineldj.com.br/proxy/rocksweb?mp=/stream",
+            codec: "mp3",
+            volume: "90",
+            autoplay: "true",
+            jsevents: true,
+            buffering: 0,
+            title: "",
+            wmode: "transparent",
+            skin: "alberto",
+            width: 250,
+            height: 95,
+          });
+        </script>
+        <!-- ENDS: AUTO-GENERATED MUSES RADIO PLAYER CODE -->
+        <div>
+          <h2>NO AR</h2>
+          <h4>Programa da tarde | 14:00 15:30</h4>
+        </div>
+      </div>
+    </div>
     <script src="index.js"></script>
   </body>
 </html>
