@@ -212,6 +212,15 @@ h1 {
   height: 100%;
 }
 
+/* Schedule*/
+
+.day-content {
+  display: none;
+}
+
+.day-content {
+  display: none;
+}
 /* ANNOUNCERS*/
 
 .annnouncers-card-grid {
