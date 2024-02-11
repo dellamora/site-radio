@@ -210,7 +210,9 @@ h1 {
 .banners-slide img {
   height: 100%;
 }
+
 /* ANNOUNCERS*/
+
 .annnouncers-card-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -335,6 +337,17 @@ h1 {
   padding: 20px;
 }
 
+/* copyright*/
+
+.copyright {
+  text-align: center;
+  padding: 20px 0px 50px;
+}
+.copyright h1 {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
 @media screen and (max-width: 768px) {
   .footer {
     flex-direction: column;
@@ -342,6 +355,32 @@ h1 {
 
   .footer-column {
     margin-bottom: 20px;
+  }
+
+  .player {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .copyright {
+    text-align: center;
+    padding: 20px 0px 90px;
+  }
+
+  .copyright h1 {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .player h2 {
+    font-size: 16px;
+    width: 30;
+  }
+
+  .player h4 {
+    font-size: 12px;
   }
 }
 
@@ -351,6 +390,7 @@ h1 {
   }
 
   /* Navbar*/
+
   .menu {
     flex-direction: column;
     align-items: center;
@@ -380,13 +420,6 @@ h1 {
   }
   #check:checked ~ .menu {
     right: 0;
-  }
-
-  /*announcers */
-  .annnouncers-card-grid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 0px;
   }
 
   /* RADIO */
