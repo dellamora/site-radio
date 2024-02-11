@@ -28,3 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
+
+function acceptCookies() {
+  document.getElementById("cookieAlert").style.display = "none";
+  // Adicione aqui o código para salvar a aceitação dos cookies
+}
