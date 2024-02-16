@@ -31,7 +31,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function acceptCookies() {
   document.getElementById("cookieAlert").style.display = "none";
-  // Adicione aqui o código para salvar a aceitação dos cookies
+
+  document.cookie =
+    "cookies_accepted=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
 }
 
 document.querySelectorAll("nav a").forEach((anchor) => {
@@ -77,6 +79,14 @@ function showDay(day) {
     days[i].style.display = "none";
   }
   document.getElementById(day).style.display = "block";
+
+  var buttons = document.querySelectorAll("#programacao button");
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].classList.remove("active");
+  }
+  document
+    .getElementById("btn" + day.charAt(0).toUpperCase() + day.slice(1))
+    .classList.add("active");
 }
 
 showCurrentDay();

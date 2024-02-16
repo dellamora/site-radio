@@ -5,16 +5,13 @@
   --color1: #fff;
   --color2: #1c1c1c;
   --color3: rgb(230, 33, 98);
+  --color4: rgb(59, 121, 202);
 }
 
 body {
   background: #f2f2f2;
   font-family: "Poppins", sans-serif;
   margin-bottom: 110px;
-}
-
-.section {
-  margin-top: 20px;
 }
 
 /* typographies */
@@ -28,8 +25,8 @@ h1 {
   position: relative;
   font-size: 24px;
   padding-left: 20px;
-  margin-bottom: 20px;
   text-transform: uppercase;
+  margin: 20px 0px 12px;
 }
 
 .title::before {
@@ -214,13 +211,70 @@ h1 {
 
 /* Schedule*/
 
-.day-content {
-  display: none;
+#programacao {
+  display: flex;
+  justify-content: space-around;
+  background-color: #dddddd;
+  padding: 6px 10px;
+}
+
+#programacao button {
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+#programacao button.active {
+  color: var(--color4);
+  border-bottom: var(--color4) 2px solid;
+}
+
+#day-container {
+  background-color: #ebeaea;
 }
 
 .day-content {
   display: none;
+  text-align: left;
+  padding: 10px 20px;
 }
+
+.card-show-content h1 {
+  font-size: 20px;
+  color: rgb(26, 54, 92);
+}
+
+.card-show {
+  display: flex;
+  padding: 20px 0px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-show-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+}
+.card-show p {
+  color: gray;
+}
+
+.card-show img {
+  border-radius: 100%;
+  width: 120px;
+  height: 120px;
+  border: 3px solid var(--color4);
+}
+
+.card-show-content {
+  width: 80%;
+}
+
 /* ANNOUNCERS*/
 
 .annnouncers-card-grid {
@@ -235,21 +289,24 @@ h1 {
 .annnouncers-card {
   display: flex;
   max-width: 600px;
-  margin: 20px auto;
   border: 1px solid #ccc;
   border-radius: 8px;
   overflow: hidden;
+  max-height: 600px;
+  padding: 20px;
+}
+.annnouncers-card p {
+  font-size: 14px;
 }
 
 .annnouncers-card img {
   max-width: 200px;
   height: auto;
   object-fit: cover;
+  border-radius: 4%;
+  margin-right: 10px;
 }
 
-.annnouncers-card-content {
-  padding: 20px;
-}
 .announcers-tag {
   color: var(--color3);
 }
@@ -273,7 +330,7 @@ h1 {
   flex-wrap: wrap;
   justify-content: space-between;
   background-color: var(--color2);
-  padding: 20px;
+  padding: 20px 80px;
   color: #f2f2f2;
 }
 
@@ -415,8 +472,48 @@ h1 {
 /* Media Queries */
 
 @media screen and (max-width: 768px) {
+  #programacao {
+    padding: 2px 4px;
+    width: 100%;
+    overflow-x: auto;
+    justify-content: space-between;
+  }
+
+  #programacao button {
+    padding: 8px;
+    font-size: 9px;
+  }
+
+  .day-content {
+    padding: 10px 20px;
+  }
+
+  .card-show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0px;
+    text-align: center;
+  }
+
+  .day-content h1 {
+    font-size: 16px;
+  }
+
+  .card-show p {
+    color: gray;
+    font-size: 12px;
+  }
+  .card-show img {
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    border: 3px solid var(--color4);
+  }
+
   .footer {
     flex-direction: column;
+    padding: 20px 40px;
   }
 
   .footer-column {
@@ -473,7 +570,7 @@ h1 {
 
 @media only screen and (max-width: 791px) {
   .section {
-    padding: 0px 40px;
+    padding: 10px 40px;
   }
 
   /* Navbar*/
@@ -545,11 +642,23 @@ h1 {
     margin-left: auto;
     margin-right: auto;
   }
+
+  .annnouncers-card img {
+    margin-right: 0px;
+  }
+
+  .footer {
+    padding: 20px 40px;
+  }
 }
 
 @media only screen and (min-width: 791px) {
   .section {
     padding: 0px 80px;
+  }
+
+  .footer {
+    padding: 20px 80px;
   }
 
   .radio-content {
@@ -572,12 +681,6 @@ h1 {
   }
 }
 
-@media only screen and (min-width: 1025px) {
-  .section {
-    padding: 0px 200px;
-  }
-}
-
 @media only screen and (max-width: 1025px) {
   .annnouncers-card {
     flex-direction: column;
@@ -585,5 +688,24 @@ h1 {
 
   .annnouncers-card img {
     max-width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .section {
+    padding: 0px 200px;
+  }
+  .footer {
+    padding: 20px 200px;
+  }
+}
+
+@media only screen and (min-width: 1900px) {
+  .section {
+    padding: 0px 400px;
+  }
+
+  .footer {
+    padding: 20px 400px;
   }
 }
