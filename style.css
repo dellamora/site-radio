@@ -654,7 +654,7 @@ h1 {
 
 @media only screen and (min-width: 791px) {
   .section {
-    padding: 0px 80px;
+    padding: 10px 80px;
   }
 
   .footer {
@@ -693,7 +693,7 @@ h1 {
 
 @media only screen and (min-width: 1440px) {
   .section {
-    padding: 0px 200px;
+    padding: 10px 200px;
   }
   .footer {
     padding: 20px 200px;
@@ -702,7 +702,7 @@ h1 {
 
 @media only screen and (min-width: 1900px) {
   .section {
-    padding: 0px 400px;
+    padding: 10px 400px;
   }
 
   .footer {
