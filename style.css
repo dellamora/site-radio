@@ -232,14 +232,11 @@ h1 {
   border-bottom: var(--color4) 2px solid;
 }
 
-#day-container {
-  background-color: #ebeaea;
-}
-
 .day-content {
   display: none;
   text-align: left;
   padding: 10px 20px;
+  background-color: #ebeaea;
 }
 
 .card-show-content h1 {
