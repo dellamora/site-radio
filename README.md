@@ -1,4 +1,4 @@
-# Site Radio
+# PWA Site Radio
 
 The project comprises HTML, CSS, and JavaScript files to create a dynamic and interactive website for broadcasting live radio, showcasing schedules, announcers, and station information.
 
